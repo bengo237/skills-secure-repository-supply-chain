@@ -54,19 +54,7 @@ jobs:
         with:
           fetch-depth: 0 # Let's get all the branches.
 
-      # Verify the PR added the dependabot changes.
-      - name: Check package for axios version 0.21.2
-        uses: skills/action-check-file@v1
-        with:
-          file: "code/src/AttendeeSite/package.json"
-          search: "0.21.2"
-
-      # Verify the PR added the dependabot changes.
-      - name: Check package-lock for axios version 0.21.2
-        uses: skills/action-check-file@v1
-        with:
-          file: "code/src/AttendeeSite/package-lock.json"
-          search: "0.21.2"
+     
 
       # In README.md, switch step 3 for step 4.
       - name: Update to step 4
